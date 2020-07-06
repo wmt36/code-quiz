@@ -1,0 +1,59 @@
+.container {
+  justify-content: center;
+  border: 20px, black;  
+  padding: 20px;
+  margin: 40px;
+  border-radius: 25px;
+  
+}
+.btn-grid {
+    background-color:;
+    margin: 20px;
+    padding: 20px;
+}
+.btn {
+    background-color:black;
+    color: white;
+    width: 50%;
+    height: 50%;
+    border-radius: 25%;
+    padding: 10px 10px;
+
+}
+.btn:hover {
+    background-color: royalblue;
+}
+.controls {
+    text-align: center;
+}
+.start-btn:hover {
+    background-color: green;
+    
+}
+.next-btn:hover {
+    background-color: royalblue;
+}
+.prev-btn:hover {
+    background-color: rgb(221, 235, 30);
+}
+.counter {
+    font-size: 25px;
+}
+.start-btn {
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 50px;
+    background-color: black;
+    color: white;
+}
+.questions{
+    font-weight: bold;
+    font-size: 20px;
+}
+.next-btn {
+    padding: 2px;
+    font-size: large;
+    width: 10%;
+}

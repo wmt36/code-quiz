@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="codquiz.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+   
+        <div id="start" class="start-btn">Start Quiz</div>
+    <div class="container">
+        <div id="quiz" style="display :;">
+          <div class="questions" id="questions">Qustion:</div>
+          <div class="btn-grid">
+            <div class="btn" id="choiceA" onclick="checkAnswer('A')">A</div>
+            <br>
+            <div class="btn" id="choiceB" onclick="checkAnswer('B')">B</div>
+            <br>
+            <div class="btn" id="choiceC" onclick="checkAnswer('C')">C</div>
+            <br>
+            <div class="btn" id="choiceD" onclick="checkAnswer('D')">D</div>  
+            <br>
+            <div id="progress"></div>
+          </div>
+            <div id="timer">
+                <div class="counter" id="counter"></div>
+            </div>  
+    <div class="controls">
+        <button id="prev" class="prev-btn" style="display: none;">Prev.</button>
+       
+        <button id="next" class="next-btn">Next</button>
+    </div> 
+    </div>
+    </div>
+    <script src="sript.js"></script>
+</body>
+</html>
