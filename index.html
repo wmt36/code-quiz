@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="codquiz.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Quiz</title>
+  <link rel="stylesheet" href="codquiz.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-   
-        <button id="start" class="start-btn">Start Quiz Timer!</button>
-    <div class="container">
-        <div id="quiz" style="display :;">
-          <div class="questions" id="questions">Qustion:</div>
-          <div class="btn-grid">
-            <div class="btn" id="choiceA" onclick="checkAnswer('A')">A</div>
-            <br>
-            <div class="btn" id="choiceB" onclick="checkAnswer('B')">B</div>
-            <br>
-            <div class="btn" id="choiceC" onclick="checkAnswer('C')">C</div>
-            <br>
-            <div class="btn" id="choiceD" onclick="checkAnswer('D')">D</div>  
-            <br>
-            <div id="progress"></div>
-          </div>
-            <div id="timer">60</div>  
-    <div class="controls">
+
+  <button id="start" class="start-btn">Start Quiz Timer!</button>
+  <div class="container">
+    <div id="quiz" style="display :none;">
+      <div class="questions" id="questions">Qustion:</div>
+      <div class="btn-grid">
+        <div class="btn" id="choiceA" onclick="checkAnswer('A')">A</div>
+        <br>
+        <div class="btn" id="choiceB" onclick="checkAnswer('B')">B</div>
+        <br>
+        <div class="btn" id="choiceC" onclick="checkAnswer('C')">C</div>
+        <br>
+        <div class="btn" id="choiceD" onclick="checkAnswer('D')">D</div>
+        <br>
+        <div id="progress"></div>
+      </div>
+      <div id="timer">60</div>
+      <div class="controls">
         <button id="prev" class="prev-btn" style="display: ;">Prev.</button>
-       
+
         <button id="next" class="next-btn">Next</button>
-    </div> 
+      </div>
     </div>
-    </div>
-    <script src="sript.js"></script>
+  </div>
+  <script src="sript.js"></script>
 </body>
+
 </html>
