@@ -1,13 +1,14 @@
+$(document).ready(function(){
+
 const questions = document.getElementById("questions");
 const start = document.getElementById("start");
 const next = document.getElementById("next");
-const previous = document.getElementById("prev");
 const choiceA = document.getElementById("choiceA");
 const choiceB = document.getElementById("choiceB");
 const choiceC = document.getElementById("choiceC");
 const choiceD = document.getElementById("choiceD");
 const quiz = document.getElementById("quiz");
-const timer = document.getElementById("counter");
+const timer = document.getElementById("timer");
 const progress = document.getElementById("progress");
 
 
@@ -41,19 +42,42 @@ let questionsList = [{
     choiceD: "console.log",
     correctAnswer: "C"
 }];
-const counter = 60;
-const questionTime = 20; //20s per question
+
+
+
+var counter = 60;
+var zero = 0;
 const lastQuestion = questionsList.length - 1;
 let runningQuestion = 0;
 runningQuestion;
+nextQuestion();
 renderQuestion();
-renderCounter();
 
 
 
-next.addEventListener("click", renderQuestion);
-console.log(next)
 
+   
+
+
+
+$("#start").click(function(){
+     timer.innerHTML = counter;
+     var interval = setInterval(timeIt, 1000);
+function timeIt(){
+    counter--;
+    timer.innerHTML = counter;
+    if( counter == zero){
+        clearInterval(interval);
+        counter = 0;
+    }
+  } 
+   
+
+});
+console.log(start);
+
+$("#next").on("click", renderQuestion());
+console.log(next);
 
 function renderQuestion(){
     let q = questionsList[runningQuestion];
@@ -64,32 +88,19 @@ function renderQuestion(){
     choiceD.innerHTML = q.choiceD;
 }
 
-start.style.display = "none";
+
+function nextQuestion() {
+  for( i = 0; i < runningQuestion.length; i++)
+    renderQuestion();
+    }
+
+start.style.display = "block";
 renderQuestion();
 quiz.style.display = "block";
 renderProgress();
 
-function renderCounter(){
-    if (counter <= questionTime) {
-        timer.innerHTML = counter;
-        counter++
-    }else{
-        counter = 0;
-    }
-}
-console.log(renderProgress);
 
-function renderProgress() {
-    for (let questions = 0; questions <= lastQuestion; questions++){
-        progress.innerHTML += "<div id=" + questions + "></div>";
-    }
-}
 
-function answerCorrect(){
-    document.getElementById(runningQuestion).innerHTML = "Coreect!"
-}
 
-function answerWrong(){
-    document.getElementById(runningQuestion).innerHTML = "Wrong Answer!"
-}
 
+});
